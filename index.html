@@ -1,0 +1,261 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEPE - The Only PEPE On Ethereum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #00ff00;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+
+        .buy-now-btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .buy-now-btn:hover {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-image: url('pepe-background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .hero-img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .hero-heading {
+            font-size: 4em;
+            color: #00ff00;
+            text-shadow: 2px 2px #000000;
+            margin-bottom: 10px;
+        }
+
+        .hero-subheading {
+            font-size: 2em;
+            color: #ffffff;
+            text-shadow: 1px 1px #000000;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        /* Marquee styles */
+        .marquee {
+            background-color: #00ff00;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* About section styles */
+        .about {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Tokenomics section styles */
+        .tokenomics {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .tokenomics-list {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+
+        .tokenomics-list li {
+            margin-bottom: 10px;
+        }
+
+        .tokenomics-logo {
+            width: 100px;
+            height: auto;
+            animation: glide 3s ease-in-out infinite;
+        }
+
+        @keyframes glide {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* How to Buy section styles */
+        .how-to-buy {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .how-to-buy-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Roadmap section styles */
+        .roadmap {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+        }
+
+        .roadmap-item {
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .roadmap-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .copy-address {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero-heading {
+                font-size: 3em;
+            }
+
+            .hero-subheading {
+                font-size: 1.5em;
+            }
+
+            .hero-btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="pepe-logo.png" alt="PEPE logo" class="logo">
+            <a href="#" class="buy-now-btn">BUY NOW</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="pepe-mascot.png" alt="PEPE mascot" class="hero-img">
+        <h1 class="hero-heading">$PEPE</h1>
+        <h2 class="hero-subheading">The Only PEPE on Ethereum</h2>
+        <a href="#" class="hero-btn">BUY $PEPE</a>
+        <a href="#" class="hero-btn">Whitepaper</a>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            $PEPE $PEPE $PEPE $PEPE $PEPE $PEPE $PEPE $PEPE $PEPE $PEPE
+        </div>
+    </div>
+
+    <section class="about">
+        <img src="pepe-character.png" alt="PEPE mascot" class="about-img">
+        <h2>PEPE: THE ONLY MEME FROG TOKEN ON ETHEREUM</h2>
+        <p>PEPE is not just a token, it's a movement. Join the amphibian revolution and leap into the future of meme finance!</p>
+    </section>
+</body>
+</html>
+```
